@@ -9,9 +9,63 @@
     <h1 style="text-align: center">Matematica - Lezione 29/10</h1>
     <ul style="font-size: large">
       <li>
-        Ricontrolla le conversioni decimali (intero e con la virgola) -> binario
+        Decimali interi:
+        <ul>
+          <li>Dividi tutto per fino a <u>risultato</u> = 0;</li>
+          <li>Prendi l'ultimo e, a ritroso, componi il numero binario;</li>
+          <li>TAGLIA LA VIRGOLA DAI RISULTATI;</li>
+          <li>
+            Esempio: 55:2= 27 resto 1; 27:2= 13 resto 1; 13:2= 6 resto 1; 6:2= 3
+            resto 0; 3:2= 1 resto 1; 1:2= 0 resto 1; 55 = 110111
+          </li>
+        </ul>
       </li>
-      <li>Anche le conversioni binario -> decimale;</li>
+      <li>
+        Per convertire un numero decimale con la virgola in binario, puoi
+        dividere il processo in due parti: la parte intera e la parte
+        frazionaria. Vediamo il metodo:
+        <ul>
+          <li>
+            Utilizza la divisione per 2 ripetuta, come per un numero intero.
+            Continua a dividere la parte intera per 2 fino a ottenere un
+            quoziente di 0 e prendi i resti dall'ultimo al primo.
+          </li>
+          <li>
+            Moltiplica la parte frazionaria per 2 e prendi la parte intera del
+            risultato (0 o 1). Usa la parte frazionaria risultante per
+            continuare la moltiplicazione fino ad arrivare a un valore
+            frazionario di 0 o finché non hai raggiunto la precisione
+            desiderata.
+          </li>
+          <li>
+            Esempio: 10,625= Parte intera (10) 10 ÷ 2 = 5 resto 0; 5 ÷ 2 = 2
+            resto 1; 2 ÷ 2 = 1 resto 0; 1 ÷ 2 = 0 resto 1; Scrivendo i resti
+            dall'ultimo al primo: 10 in binario è 1010.
+          </li>
+          <li>
+            Scrivendo i resti dall'ultimo al primo: 10 in binario è 1010. Parte
+            frazionaria (0,625) 0 , 625 × 2 = 1 , 25 0,625×2=1,25, prendi 1 come
+            cifra binaria e continua con la frazione 0 , 25 0,25. 0 , 25 × 2 = 0
+            , 5 0,25×2=0,5, prendi 0 come cifra binaria e continua con 0 , 5
+            0,5. 0 , 5 × 2 = 1 , 0 0,5×2=1,0, prendi 1 come cifra binaria e la
+            frazione ora è 0, quindi puoi fermarti;
+          </li>
+        </ul>
+      </li>
+      <li>
+        Binario decimale:
+        <ul>
+          <li>
+            Potenza di 2 più vicina alla <u>posizione</u> dei valori partendo da
+            sinistra;
+          </li>
+          <li>Operazioni a partire da sinistra;</li>
+          <li>
+            Esempio: 110111 2^5*1=32 2^4*1=16 2^3*0=0 2^2*1=4 2^1*1=2 2^0*1=1
+            32+16+0+4+2+1 = 55
+          </li>
+        </ul>
+      </li>
       <li>Non dimenticare le conversioni dei numeri periodici;</li>
       <li>
         Somma in binario:
